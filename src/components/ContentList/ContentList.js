@@ -1,21 +1,29 @@
 import React from 'react';
-import './ContentList.scss'; // Import CSS file for styling
+import styles from './ContentList.module.scss'; // Import CSS file for styling
+import Item from './Item/Item';
 
 function ContentList() {
   // Dummy list of subjects
   const subjects = ['Math', 'Science', 'History', 'English', 'Geography', 'Art', 'Music'];
+ 
 
   return (
-    <div className="sidebar">
-      <h2>Subjects</h2>
-      <div className="subject-list">
-        <ul>
-          {subjects.map((subject, index) => (
-            <li key={index}>{subject}</li>
-          ))}
-        </ul>
+
+      <div className={styles.content}>
+        
+        <div className={styles.list}>
+          <ul>
+            {subjects.map((subject, index) => (
+              <li key={index}>
+                <Item icon="home" content={subject}/>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </div>
+      
+      
+
   );
 }
 

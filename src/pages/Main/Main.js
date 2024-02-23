@@ -14,7 +14,7 @@ function Main() {
             </Button>
             <InputBox>
             </InputBox>
-            <Sidebar className="sidebar"/>
+            <Sidebar className="sidebar" icon="home" name="Môn Toán"/>
         </div>
     )
 }
