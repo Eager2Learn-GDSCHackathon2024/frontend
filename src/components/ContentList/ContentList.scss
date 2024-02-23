@@ -1,0 +1,22 @@
+.sidebar {
+    width: 200px;
+    height: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+        .subject-list {
+            margin-top: 20px;
+            ul {
+                list-style-type: none;
+                padding: 0;
+                li {
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    &:hover {
+                        color: blue; /* Change color on hover */
+
+                    }
+                }
+            }
+        }
+  }

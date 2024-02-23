@@ -1,0 +1,12 @@
+.main {
+    position: relative;
+    .sidebar {
+        position: absolute;
+        right: 0; /* Position the tag at the rightmost of its parent container */
+        top: 50%; /* Vertically center the tag */
+        transform: translateY(-50%); /* Adjust vertical alignment */
+        background-color: blue;
+        color: white;
+        padding: 5px 10px;
+    }
+}

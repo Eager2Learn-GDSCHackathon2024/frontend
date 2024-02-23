@@ -1,0 +1,26 @@
+
+.input-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 20px;
+    width:80%;
+    height: 40px;
+    min-height: 10px;   
+
+    .input-prompt {
+        border: 0px;
+        width: 90%;
+        background: transparent;
+        margin-left: 20px;
+        outline: none;
+        &:focus {
+            border-color: transparent;
+        }
+    }   
+    #submit-prompt {
+        margin-right: 10px; /* Adjust margin as needed */
+        font-size: 24px; /* Set the font size to make the icon bigger */
+  
+    }
+}
