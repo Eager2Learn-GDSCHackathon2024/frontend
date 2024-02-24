@@ -1,14 +1,14 @@
 import React from 'react';
-import './ContentList.scss'; // Import CSS file for styling
+import styles from './ContentList.module.scss'; // Import CSS file for styling
 
 function ContentList() {
   // Dummy list of subjects
   const subjects = ['Math', 'Science', 'History', 'English', 'Geography', 'Art', 'Music'];
 
   return (
-    <div className="sidebar">
+    <div className={styles.sidebar}>
       <h2>Subjects</h2>
-      <div className="subject-list">
+      <div className={styles.subjectlist}>
         <ul>
           {subjects.map((subject, index) => (
             <li key={index}>{subject}</li>

@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 import { FaStar, FaMicrophone} from 'react-icons/fa'
 import './Button.scss'
 function Button({icon, onClick}) {
@@ -9,7 +9,7 @@ function Button({icon, onClick}) {
             iconComponent = <FaStar/>
             break;
         case 'mic':
-            iconComponent = <FaMicrophone/>
+            iconComponent = <FaMicrophone style={{fontSize:'24px'}}/>
             break;
         default:
             iconComponent = null
