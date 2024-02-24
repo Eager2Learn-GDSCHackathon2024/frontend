@@ -6,6 +6,7 @@ import MainContent from "../../layouts/components/Maincontent/Maincontent"
 import InputBox from "../../components/Input/InputBox";
 import Sidebar from "../../layouts/components/Sidebar/Sidebar";
 function Main() {
+    
     const handleClick = () => {
         console.log('button clicked')
     }
