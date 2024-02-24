@@ -1,10 +1,11 @@
+@import './../../assets/color/color.scss';
 .round-button {
     border: none;
     border-radius: 50%; /* Make the button round */
-    background-color: #007bff; /* Button background color */
+    background-color:$BUTTON_COLOR; /* Button background color */
     color: #fff; /* Text color */
-    width: 50px; /* Button width */
-    height: 50px; /* Button height */
+    width: 75px; /* Button width */
+    height: 75px; /* Button height */
     font-size: 1.2rem; /* Font size */
     display: flex;
     justify-content: center;
@@ -12,6 +13,6 @@
     cursor: pointer;
     outline: none; /* Remove outline on focus */
     &:hover {
-        background-color: darkblue;
+        background-color: rgb(127, 127, 127);
     }
 }

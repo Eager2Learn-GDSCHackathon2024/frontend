@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {FaArrowUp} from 'react-icons/fa'
-import './InputBox.scss'
+import styles from './InputBox.module.scss'
 function InputBox() {
   const [inputValue, setInputValue] = useState('');
 
@@ -11,16 +11,16 @@ function InputBox() {
     console.log('submit clicked')
   } 
   return (
-    <div className='input-box'>
+    <div className={styles.inputBox}>
 
       <input
-        className='input-prompt'
+        className={styles.inputPrompt}
         type="text"
         value={inputValue}
         onChange={handleChange}
         placeholder="Điền yêu cầu vào đây nhé"
       />
-      <FaArrowUp id='submit-prompt' onChange={handleSubmit}/>
+      <FaArrowUp id={styles.submitPrompt} onChange={handleSubmit}/>
     </div>
   );
 }
