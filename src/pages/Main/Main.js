@@ -12,7 +12,7 @@ function Main() {
     return (
         <div className={styles.main}>
                 <MainContent/>
-                <Sidebar/>
+                <Sidebar className="sidebar" icon="home" name="Môn Toán"/>
         </div>
     )
 }
