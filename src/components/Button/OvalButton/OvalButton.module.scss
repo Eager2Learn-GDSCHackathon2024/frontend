@@ -1,0 +1,25 @@
+@import './../../../assets/fonts/fonts.scss';
+
+.ovalButton {
+    width: 331px;;
+    /* Adjust width as needed */
+    height: 77px;;
+    /* Adjust height to make it oval */
+    border-radius: 100px;
+    /* Half of the height to make it circular */
+    background-color: #87CAFF;
+    /* Green background color */
+    font-size: 31px;
+    /* Font size */
+    border: none;
+    /* No border */
+    cursor: pointer;
+    font-family: $font-family-common;
+
+    /* Cursor style */
+    &::hover {
+        background-color: #45a049;
+        /* Darker green background color on hover */
+    }
+
+}

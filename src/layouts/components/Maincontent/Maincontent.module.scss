@@ -1,3 +1,4 @@
+@import './../../../assets/fonts/fonts.scss';
 .interact {
     overflow-y: auto;
     overflow-x: hidden;
@@ -5,9 +6,12 @@
     position: relative;
     /* Otherstyles */
     .lecture {
+        margin-top: 30px;
         margin-left: 40px;
         margin-right: 40px;
-        
+        // font-family: 'Protest Riot'\;
+        font-family: $font-family-normal-writing ;
+
     }
     .interactPrompt {
         position: fixed;
