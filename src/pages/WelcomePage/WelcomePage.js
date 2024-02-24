@@ -1,9 +1,10 @@
 import React from 'react';
-
+import './WelcomePage.module.scss'
 
 const WelcomePage = () => {
     return (
-        <div>This is WelcomePage</div>
+        <section className='background'>  <div>This is WelcomePage</div></section>
+      
     )
 }
 
