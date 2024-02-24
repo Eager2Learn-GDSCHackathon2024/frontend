@@ -1,36 +1,27 @@
-// Button.jsx
 import React, { useState, useEffect } from 'react';
-import { FaMicrophone, FaMicrophoneAltSlash } from 'react-icons/fa';
-import './Button.scss';
 
-function Button({ onClick }) {
+const SpeechToText = () => {
     const [isListening, setIsListening] = useState(false);
     const [recognition, setRecognition] = useState(null);
-    const [content, setContent] = useState("");
-
     useEffect(() => {
         if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
             const recognitionInstance = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
             recognitionInstance.lang = 'vi-VN';
             recognitionInstance.continuous = true;
-
-            recognitionInstance.onstart = function () {
+            recognitionInstance.onstart = function() {
                 console.log('Speech recognition started');
             };
-
-            recognitionInstance.onend = function () {
+            recognitionInstance.onend = function() {
                 console.log('Speech recognition ended');
                 if (isListening) {
                     recognitionInstance.start(); // Start again if continuous mode is enabled
                 }
             };
-
-            recognitionInstance.onresult = function (event) {
+            recognitionInstance.onresult = function(event) {
                 const transcript = event.results[event.results.length - 1][0].transcript;
                 console.log('Recognized speech:', transcript);
-                setContent(transcript);
+                // Do something with the recognized speech, like updating a state variable
             };
-
             setRecognition(recognitionInstance);
         } else {
             console.error('Speech recognition not supported in this browser');
@@ -53,15 +44,14 @@ function Button({ onClick }) {
         }
     };
 
-    useEffect(() => {
-        onClick(content); // Pass content to the onClick function
-    }, [content]);
-
     return (
-        <button className="round-button" onClick={toggleSpeechRecognition}>
-            {isListening ? <FaMicrophone style={{ fontSize: '24px' }} /> : <FaMicrophoneAltSlash style={{ fontSize: '24px' }} />}
-        </button>
+        <div>
+            <button onClick={toggleSpeechRecognition}>
+                {isListening ? 'Stop Listening' : 'Start Listening'}
+            </button>
+            {/* You can render additional components or UI here */}
+        </div>
     );
-}
+};
 
-export default Button;
+export default SpeechToText;

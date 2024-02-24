@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
 import {FaArrowUp} from 'react-icons/fa'
 import styles from './InputBox.module.scss'
-function InputBox() {
+function InputBox({inputVoice}) {
   const [inputValue, setInputValue] = useState('');
+
+  useEffect(() => {
+    if (inputVoice !== undefined) {
+      setInputValue(inputVoice);
+    }
+  }, [inputVoice]);
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
@@ -16,7 +23,7 @@ function InputBox() {
       <input
         className={styles.inputPrompt}
         type="text"
-        value={inputValue}
+        value={inputValue} or
         onChange={handleChange}
         placeholder="Điền yêu cầu vào đây nhé"
       />

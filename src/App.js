@@ -4,6 +4,7 @@ import Main from './pages/Main/Main.js'
 import WelcomePage from './pages/WelcomePage/WelcomePage.js';
 import UserInformation from './pages/UserInformation/UserInformation.js';
 import HTMLViewer from './utils/HTMLViewer/HTMLViewer.js';
+import SpeechToText from './utils/Speech2Text/Speech2Text.js';
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
           <Route path='/view'element={<HTMLViewer/>}/>
           <Route path='/user-information' element={<UserInformation/>}/>
           <Route path="/course" className="background" element={<Main />} />
+          <Route path="/speech" element={<SpeechToText />} />
         </Routes>
       </BrowserRouter>
     </div>

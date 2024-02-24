@@ -1,41 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-const HTMLViewer = () => {
-    const [htmlContent, setHtmlContent] = useState('');
-    const [url, setUrl] = useState('');
-    const handleSubmit = async(event) => {
-        event.preventDefault();
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error('Failed to fetch HTML');
-            }
-            const data = await response.text();
-            setHtmlContent(data);
-            console.log (htmlContent);
-        } catch (error) {
-            console.error('Error fetching HTML:', error);
-            
-        }
-    }
+function MyComponent() {
+  // HTML content that you want to render
+  const htmlContent = '<h1>Hello, <em>world</em>!</h1>';
 
+  return (
+    <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+  );
+}
 
-    return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="urlInput">Enter URL:</label>
-                <input 
-                    type="text" 
-                    id="urlInput" 
-                    value={url} 
-                    onChange={(event) => setUrl(event.target.value)} 
-                    required 
-                />
-                <button type="submit">Fetch HTML</button>
-            </form>
-            <div className="abc" dangerouslySetInnerHTML={{ __html: htmlContent }} />
-        </div>
-    );
-};
-
-export default HTMLViewer;
+export default MyComponent;
