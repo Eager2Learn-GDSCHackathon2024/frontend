@@ -1,0 +1,26 @@
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-self: center;
+    width: 700px;
+    height: 100%;
+
+    .educationLevels {
+        display: flex;
+        justify-content: space-between;
+        .item1 {
+            flex: 1;
+        }
+        .item2 {
+            flex: 1
+        }
+        .item3 {
+            flex: 1
+        }
+        .item4 {
+            flex: 1
+        }
+        margin-bottom: 20px;
+    }
+}

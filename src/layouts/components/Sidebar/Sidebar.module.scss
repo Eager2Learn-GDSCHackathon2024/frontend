@@ -5,6 +5,7 @@
     background-color: #F0F8FF;
     overflow-y: auto; /* Enable vertical scrolling */
     padding-left: 20px;
+    border-radius: 0px 40px 40px 0px;
 
     .icon {
         display: inline-block;
@@ -80,44 +81,4 @@
         height: 3px; /* Độ dày của đường kẻ */
         background-color: #BDBDBD; /* Màu sắc của đường kẻ */
     }
-}
-
-.slider:before {
-    border-radius: 50%;
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-  
-input:checked + .slider {
-    background-color: #2196F3;
-}
-  
-input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-}
-  
-.line {
-    width: 100%;
-    height: 3px; /* Độ dày của đường kẻ */
-    background-color: #BDBDBD; /* Màu sắc của đường kẻ */
-}
-
-.belowContainer {
-    height: 2000px;
-    display: flex;
-    align-self: flex-end;
-    background-color: black;
 }

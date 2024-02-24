@@ -10,9 +10,7 @@ function MainContent() {
 
     return (
         <section className={styles.interact}>
-            <section className={styles.learning}>
-                <div className={styles.lecture}> <LearningFormTemplate/> </div>
-            </section>
+            <div className={styles.lecture}> <LearningFormTemplate/> </div>
             <section className={styles.interactPrompt}>
                 <div id={styles.buttonMic}>
                     <Button onclick={handleClick} icon="mic"></Button>

@@ -4,7 +4,7 @@ const DynamicTextDisplay = () => {
   const words = ['This', 'is', 'an', 'example', 'sentence', 'with', 'changing', 'speed', 'of', 'words.'];
   const [displayedWords, setDisplayedWords] = useState([]);
   const [wordIndex, setWordIndex] = useState(0);
-  const [speed, setSpeed] = useState(500); // Default speed: 500 milliseconds
+  const [speed, setSpeed] = useState(100); // Default speed: 500 milliseconds
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -21,7 +21,7 @@ const DynamicTextDisplay = () => {
   return (
     <div>
       {displayedWords.map((word, index) => (
-        <span key={index}>{word} </span>
+        <span style={{fontSize:"35px"}} key={index}>{word} </span>
       ))}
     </div>
   );
