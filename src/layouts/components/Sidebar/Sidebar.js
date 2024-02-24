@@ -19,7 +19,7 @@ function Sidebar({icon, name}) {
           break;
       default:
           IconComponent = null
-}
+  }
 
   const changeState = () => {
     setState(
@@ -37,8 +37,11 @@ function Sidebar({icon, name}) {
 
   return (
       <div className={styles.sidebar}>
-        {IconComponent}
-        <h2 className={styles.name}>{name}</h2>
+        <div>
+          {IconComponent}
+          <h2 className={styles.name}>{name}</h2>
+        </div>
+        
         {current}
         <div className={styles.line}/>
         <div className={styles.footer}>
@@ -48,6 +51,7 @@ function Sidebar({icon, name}) {
             <span className={styles.slider} onClick={changeState}></span>
             </label>
         </div>
+        
       </div>
   );
 }
